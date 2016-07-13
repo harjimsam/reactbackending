@@ -1,0 +1,93 @@
+html{
+    font-family: Arial, Helvetica, Clean, sans-serif
+}
+body{
+    background: #fff17c;
+    color: darkcyan;
+
+}
+.in h3{
+    text-align: center;
+    font-family: Verdana, Geneva;
+}
+.in{
+    background: white;
+    font-size: 25px;
+
+}
+
+
+.out{
+    background: #ffe347;
+    text-align: center;
+}
+
+:not(ul){
+    border: 1px solid #000000;
+    margin:3px ;
+    padding: 6px;
+}
+
+a {
+
+    background: #cfc1be ;
+
+}
+
+.flashes{
+    background: red;
+    color: white;
+
+}
+
+
+button:active {
+    background: orange;
+
+}
+
+
+
+.title{
+    font-size: 35px;
+    text-align: left;
+}
+
+.entry{
+    font-size: 17px;
+    text-align: left;
+
+}
+
+
+h1.title.article {
+    font-size: 20px;
+    text-align: left;
+
+}
+.thumbs-up{
+    font-family: FontAwesome;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.thumbs-up[data-state="checked"]::after{
+    content: "\f164";   /* closed thumb up */
+}
+
+.thumbs-up[data-state="unchecked"]::after{
+    content: "\f087";   /* open  thumb up */
+}
+.thumbs-down{
+    font-family: FontAwesome;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.thumbs-down[data-state="checked"]::after{
+    content: "\f165";   /* closed  thumb up */
+}
+
+.thumbs-down[data-state="unchecked"]::after{
+    content: "\f088";   /* open  thumb up */
+}

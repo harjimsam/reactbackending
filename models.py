@@ -5,7 +5,7 @@ from init import db,app
 
 
 class User(db.Model):
-    #__tablename__ = 'users'
+    __tablename__ = 'rusers'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(50))

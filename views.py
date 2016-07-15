@@ -9,7 +9,7 @@ from sqlalchemy import desc
 from math import ceil
 
 #Note: Test PER_PAGE, need to change to 25
-PER_PAGE = 25
+
 #
 #
 # @app.before_request

@@ -138,3 +138,15 @@ app.jinja_env.globals['url_for_other_page'] = url_for_other_page
 def logout():
     return flask.redirect('/')
 
+
+
+@app.route('/firstReact')
+def firstReact():
+    print('react is trying')
+
+    return "react is definately trying"
+    #
+    # flask.flash("react is trying")
+    # return flask.redirect('/')
+
+

@@ -10,23 +10,23 @@ from math import ceil
 
 #Note: Test PER_PAGE, need to change to 25
 PER_PAGE = 25
-
-
-@app.before_request
-def setup_csrf():
-    if 'csrf_token' not in flask.session:
-        flask.session['csrf_token'] = base64.b64encode(os.urandom(32)).decode('ascii')
-
-
-@app.before_request
-def setup_user():
-    if 'auth_user' in flask.session and flask.session['auth_user'] is not None:
-        user = models.User.query.get(flask.session['auth_user'])
-        flask.g.user = user
-def checkAuth():
-    if flask.session['auth_user'] is None:
-        return flask.redirect('/')
-
+#
+#
+# @app.before_request
+# def setup_csrf():
+#     if 'csrf_token' not in flask.session:
+#         flask.session['csrf_token'] = base64.b64encode(os.urandom(32)).decode('ascii')
+#
+#
+# @app.before_request
+# def setup_user():
+#     if 'auth_user' in flask.session and flask.session['auth_user'] is not None:
+#         user = models.User.query.get(flask.session['auth_user'])
+#         flask.g.user = user
+# def checkAuth():
+#     if flask.session['auth_user'] is None:
+#         return flask.redirect('/')
+#
 
 @app.route('/')
 def index():

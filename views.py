@@ -51,7 +51,10 @@ def login():
 
         if user:
             #if they do, take them to the homepage
+
             password = bcrypt.hashpw(p.encode('utf8'), user.password)
+
+
             if password == user.password:
 
                 flask.session['auth_user'] = user.id
@@ -89,7 +92,15 @@ def createNewUser():
 
                 newUser = models.User(p,u)
                 newUser.username = u
-                newUser.password = bcrypt.hashpw(p.encode('utf8'), bcrypt.gensalt(15))
+                # newUser.password = bcrypt.hashpw(p.encode('utf8'), bcrypt.gensalt(15))
+
+
+                print("in ",p)
+
+                print("out ", newUser.password)
+                print("size ", len(newUser.password))
+
+
                 db.session.add(newUser)
                 db.session.commit()
                 flask.session['auth_user'] = newUser.id
